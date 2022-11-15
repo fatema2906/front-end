@@ -34,7 +34,7 @@ const Employee = () => {
     setTimeout(() => {
       setError(false);
 
-    }, 50000)
+    }, 1000)
   }
 
   const handlePendingError = () => {
@@ -44,7 +44,7 @@ const Employee = () => {
     setTimeout(() => {
       setPendingError(false);
 
-    }, 50000)
+    }, 1000)
   }
 
   const handleSuccess = () => {

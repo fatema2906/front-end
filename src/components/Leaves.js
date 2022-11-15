@@ -1,5 +1,7 @@
 import React, { Component } from 'react'
 import axios from 'axios'
+import Alert from '@mui/material/Alert';
+
 import Cookies from 'universal-cookie';
 
 
@@ -9,14 +11,16 @@ class Leaves extends Component {
         super(props)
         this.approve = this.approve.bind(this);
         this.state = {
-            leaves: []
+            leaves: [],
+            approved: false,
+            rejected: false,
         }
+
     }
 
     async getLeaves() {
         const cookies = new Cookies();
 
-        // console.log("manager email",cookies.get('ManagerEmail'));
         const response = await axios.get('http://localhost:3000/api/leaves',
             { headers: { 'email': cookies.get('ManagerEmail') } })
         this.setState({ leaves: response.data.data });
@@ -28,18 +32,54 @@ class Leaves extends Component {
 
         console.log("manager email", cookies.get('ManagerEmail'));
         const body = { leaveId: id, status: status };
-        const response = await axios.put('http://localhost:3000/api/leaves',body);
+        const response = await axios.put('http://localhost:3000/api/leaves', body);
 
-        const filtered = this.leaves.filter(employee => {
-            return employee.leaveId === id;
-        });
+        if(status === 'APPROVED'){
+            this.setState({
+                rejected: false
+            });
+            this.handleApprove();
+        }
+        else if(status === 'REJECTED'){
+            this.setState({
+                approved: false
+            });
+            this.handleReject();
+        }
 
         this.setState({
-            leaves: this.leaves.filter(employee =>  employee.leaveId !== id)
+            leaves: this.state.leaves.filter(element => element.leaveId !== id)
         });
 
-        this.setState({ leaves: response.data.data });
     }
+
+     handleApprove = () => {
+        this.setState({
+            approved: true
+        });
+    
+      
+        setTimeout(() => {
+            this.setState({
+                approved: false
+            });
+    
+        }, 10000)
+      }
+
+      handleReject = () => {
+        this.setState({
+            rejected: true
+        });
+    
+      
+        setTimeout(() => {
+            this.setState({
+                rejected: false
+            });
+    
+        }, 10000)
+      }
 
     approve(id, status) {
         this.approveLeave(id, status);
@@ -53,7 +93,12 @@ class Leaves extends Component {
         return (
             <div>
                 <div className='center'>
-                    <div className='Auth-form-container'>
+                    <div className='error-box'>
+                        {this.state.approved ? <Alert severity="success">The Request Has Approved!</Alert> : null}
+                        {this.state.rejected ? <Alert severity="success">The Request Has Rejected!</Alert> : null}
+
+                    </div>
+                    <div className='Auth-form-container login-container'>
                         <div className='user-form-container'>
                             <div className='request-container'>
                                 <h2>Request for an annual leave</h2>

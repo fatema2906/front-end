@@ -21,7 +21,7 @@ const Login = () => {
     setTimeout(() => {
       setError(false);
 
-    }, 50000)
+    }, 10000)
   }
 
   const handleSubmit = (e) => {

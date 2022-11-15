@@ -4,7 +4,6 @@ import Home from './components/Home'
 import EmployeeLogin from './components/EmployeeLogin';
 import ManagerLogin from './components/ManagerLogin';
 import Employee from './components/Employee';
-import Manager from "./components/Manager";
 import Leaves from "./components/Leaves";
 
 // import { useNavigate} from 'react-router-dom';
