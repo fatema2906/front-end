@@ -1,0 +1,180 @@
+body {
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  background-color: #d8ecf3;
+
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+    monospace;
+}
+
+.App {
+  background-color: white;
+}
+
+.Auth-form-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100vw;
+  height: 100vh;
+}
+.login-container {
+  margin-top: -58px;
+}
+
+.Auth-form {
+  width: 950px;
+  box-shadow: rgb(0 0 0 / 16%) 1px 1px 10px;
+  padding-top: 40px;
+  padding-bottom: 60px;
+  border-radius: 8px;
+  background-color: white;
+}
+
+.user-form-container {
+  width: 950px;
+  box-shadow: rgb(0 0 0 / 16%) 1px 1px 10px;
+  padding: 20px;
+  height: 400px;
+  overflow: auto;
+  border-radius: 8px;
+  background-color: white;
+}
+
+.user-container {
+  margin-top: 20px !important;
+  width: 990px;
+  margin: auto;
+}
+
+.user-name {
+  padding-left: 20px;
+  width: 300px;
+  box-shadow: rgb(0 0 0 / 16%) 1px 1px 10px;
+  padding-top: 20px;
+  padding-bottom: 20px;
+  border-radius: 8px;
+  background-color: white;
+}
+
+.Auth-form-content {
+  width: 160px;
+  margin: auto;
+}
+
+.Auth-form-title {
+  text-align: center;
+  margin-bottom: 1em;
+  font-size: 40px;
+  color: rgb(34, 34, 34);
+  font-weight: 800;
+}
+
+.form-group{
+  margin-bottom: 40px;
+}
+
+label {
+  font-size: 24px;
+  font-weight: 600;
+  color: rgb(34, 34, 34);
+}
+
+.User-type-btn {
+  width: 300px;
+  height: 200px;
+  border-radius: 10px;
+  font-size: 24px;
+  cursor: pointer;
+  background-color: white;
+  border-color: #b1d9e7;
+  border-style: double;
+  color: #18404e;
+}
+.User-type-btn:hover {
+  background-color: #b1d9e7;
+}
+
+.Type-of-user-container {
+  display: flex;
+  width: 650px;
+  justify-content: space-between;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.center {
+  margin: 0;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -ms-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+}
+
+input{
+    padding-top: 2px;
+    padding-bottom: 2px;
+    border-style: double;
+    border-radius: 8px;
+}
+
+.login-btn{
+  width: 75px;
+  padding-top: 2px;
+  padding-bottom: 2px;
+  border-style: none;
+  border-radius: 8px;
+  background: #b1d9e7;
+  cursor: pointer;
+  margin-right: 10px;
+}
+
+.request-container{
+  width: 400px;
+  margin-right: auto;
+  margin-left: auto;
+}
+
+abbr{
+  text-decoration: none !important; 
+}
+
+.react-calendar{
+  margin-bottom: 20px;
+}
+
+.error-box{
+  display: flex;
+  justify-content: flex-end;
+  margin-top: 10px;
+  margin-right: 20px;
+  height: 48px;
+}
+
+.list-of-users{
+  height: 150px;
+  border-style: none;
+  border-radius: 8px;
+  background: #ddeaee;
+  padding: 10px;
+  margin-bottom: 10px;
+  display: flex;
+  flex-direction: column;
+  padding-left: 120px;
+}
+
+.leave-user-name{
+   margin-bottom: 10px;
+}
+
+.leave-end-date{
+  margin-bottom: 30px;
+}
