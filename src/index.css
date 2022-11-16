@@ -25,6 +25,7 @@ code {
   width: 100vw;
   height: 100vh;
 }
+
 .login-container {
   margin-top: -58px;
 }
@@ -77,7 +78,7 @@ code {
   font-weight: 800;
 }
 
-.form-group{
+.form-group {
   margin-bottom: 40px;
 }
 
@@ -98,6 +99,7 @@ label {
   border-style: double;
   color: #18404e;
 }
+
 .User-type-btn:hover {
   background-color: #b1d9e7;
 }
@@ -119,14 +121,14 @@ label {
   transform: translate(-50%, -50%);
 }
 
-input{
-    padding-top: 2px;
-    padding-bottom: 2px;
-    border-style: double;
-    border-radius: 8px;
+input {
+  padding-top: 2px;
+  padding-bottom: 2px;
+  border-style: double;
+  border-radius: 8px;
 }
 
-.login-btn{
+.login-btn {
   width: 75px;
   padding-top: 2px;
   padding-bottom: 2px;
@@ -137,21 +139,21 @@ input{
   margin-right: 10px;
 }
 
-.request-container{
+.request-container {
   width: 400px;
   margin-right: auto;
   margin-left: auto;
 }
 
-abbr{
-  text-decoration: none !important; 
+abbr {
+  text-decoration: none !important;
 }
 
-.react-calendar{
+.react-calendar {
   margin-bottom: 20px;
 }
 
-.error-box{
+.error-box {
   display: flex;
   justify-content: flex-end;
   margin-top: 10px;
@@ -159,7 +161,7 @@ abbr{
   height: 48px;
 }
 
-.list-of-users{
+.list-of-users {
   height: 150px;
   border-style: none;
   border-radius: 8px;
@@ -171,10 +173,10 @@ abbr{
   padding-left: 120px;
 }
 
-.leave-user-name{
-   margin-bottom: 10px;
+.leave-user-name {
+  margin-bottom: 10px;
 }
 
-.leave-end-date{
+.leave-end-date {
   margin-bottom: 30px;
 }

@@ -34,13 +34,13 @@ class Leaves extends Component {
         const body = { leaveId: id, status: status };
         const response = await axios.put('http://localhost:3000/api/leaves', body);
 
-        if(status === 'APPROVED'){
+        if (status === 'APPROVED') {
             this.setState({
                 rejected: false
             });
             this.handleApprove();
         }
-        else if(status === 'REJECTED'){
+        else if (status === 'REJECTED') {
             this.setState({
                 approved: false
             });
@@ -53,33 +53,33 @@ class Leaves extends Component {
 
     }
 
-     handleApprove = () => {
+    handleApprove = () => {
         this.setState({
             approved: true
         });
-    
-      
+
+
         setTimeout(() => {
             this.setState({
                 approved: false
             });
-    
-        }, 10000)
-      }
 
-      handleReject = () => {
+        }, 10000)
+    }
+
+    handleReject = () => {
         this.setState({
             rejected: true
         });
-    
-      
+
+
         setTimeout(() => {
             this.setState({
                 rejected: false
             });
-    
+
         }, 10000)
-      }
+    }
 
     approve(id, status) {
         this.approveLeave(id, status);
